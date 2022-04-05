@@ -1,10 +1,14 @@
 from bs4 import BeautifulSoup
 
-with open("Players_General_Scoring.html") as fp:
+with open("..//HTML_Data//Players_General_Scoring.html") as fp:
     soup = BeautifulSoup(fp)
 
-soup = BeautifulSoup("<html>data</html>")
+player_data = []
 
-volume = soup.findAll("td", {"class": "first sorted"})[0].string
+for i in range(0,339):
+    player_data.append(soup.findAll("tr", {"index" : i})[0])
 
-print(volume)
+headers = soup.findAll("th", {"data-dir" : -1})
+
+for i in headers:
+    print(i.string)
