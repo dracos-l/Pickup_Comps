@@ -18,8 +18,8 @@ for i in headers_soup:
 
 player_data_list = []
 
-for i in range(0,1):
-    data_player = player_data[i].findAll("td")
+for i in player_data:
+    data_player = i.findAll("td")
     isolated_data = []
     for c in data_player:
         append_item = c.get_text().replace('\n','')
@@ -27,5 +27,5 @@ for i in range(0,1):
             isolated_data.append(append_item)
     player_data_list.append(isolated_data)
 
-print(player_data_list)
+print(player_data_list[0:3])
 print(headers_list)
