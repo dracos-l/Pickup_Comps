@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-import pandas as pd
 
 with open("..//HTML_Data//Players_General_Scoring.html") as fp:
     soup = BeautifulSoup(fp)
