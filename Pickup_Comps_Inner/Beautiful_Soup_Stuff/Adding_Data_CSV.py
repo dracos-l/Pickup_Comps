@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-with open("..//HTML_Data//Players_General_Scoring.html") as fp:
+with open("..//HTML_Data//Players_General_Usage.html") as fp:
     soup = BeautifulSoup(fp)
 
 player_data = []
@@ -10,7 +10,7 @@ for i in range(0,351):
 
 headers_soup = soup.findAll("th", {"data-dir" : -1})
 
-headers_list = ["Player","Team","Age"]
+headers_list = []
 
 for i in headers_soup:
     item = i.get_text().replace("\n",'')
@@ -25,11 +25,6 @@ for i in player_data:
         append_item = c.get_text().replace('\n','')
         if append_item != '':
             isolated_data.append(append_item)
-    player_data_list.append(isolated_data)
+    player_data_list.append(isolated_data[1,6:])
 
-
-player_data_list.insert(0,headers_list)
-
-new_player_data_list = [",".join(i) for i in player_data_list]
-
-print("\n".join(new_player_data_list))
+print(player_data_list)
