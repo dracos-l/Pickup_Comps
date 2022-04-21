@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-with open("..//HTML_Data//Players_General_Usage.html") as fp:
+with open("..//HTML_Data//Player_General_Usage.html") as fp:
     soup = BeautifulSoup(fp)
 
 player_data = []

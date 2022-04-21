@@ -9,39 +9,39 @@ General Usage
 - %STL
 - %BLK
 
-Playtype Isolation
+Playtype Isolation Offense
 - Freq
 - EFG%
 
-Playtype Pick and Roll Man
+Playtype Pick and Roll Man Offense
 - Freq
 - EFG%
 
-Playtype Pick and Ball Hander
+Playtype Pick and Ball Hander Offense
 - Freq
 - EFG%
 
-Playtype Post Up
+Playtype Post Up Offense
 - Freq
 - EFG%
 
-Playtype Spot Up
+Playtype Spot Up Offense
 - Freq
 - EFG%
 
-Playtype Handoff
+Playtype Handoff Offense
 - Freq
 - EFG%
 
-Playtype Cut
+Playtype Cut Offense
 - Freq
 - EFG%
 
-Playtype Off Screen 
+Playtype Off Screen Offense
 - Freq
 - EFG%
 
-Playtype Put Back
+Playtype Put Back Offense
 - Freq
 - EFG%
 
@@ -56,15 +56,15 @@ Tracking Catch and Shoot (Do we separate three)
 - PTS
 - EFG
 
-Tracking Pull Up (Do we separate three)*
+Tracking Pull Up (Do we separate three)
 - PTS 
 - EFG
 
-Players Defense Dashboard 3 Pointer (Instead what we could do is greater than 15ft and just make the category premeter shots)
+Players Defense Dashoard <6fr
 - Diff%
 - DFGA or Freq
 
-Players Defense Dashoard <6fr
+Players Defense Dashboard 3 Pointer (Instead what we could do is greater than 15ft and just make the category premeter shots)*
 - Diff%
 - DFGA or Freq
 
@@ -81,6 +81,42 @@ Shot Dashboard Closest Defender*
 Shot Dashboard Touch Time*
 
 Shot Dashboard Dribbles*
+
+Playtype Isolation Defense*
+- Freq
+- EFG%
+
+Playtype Pick and Roll Man Defense*
+- Freq
+- EFG%
+
+Playtype Pick and Ball Hander Defense*
+- Freq
+- EFG%
+
+Playtype Post Up Defense*
+- Freq
+- EFG%
+
+Playtype Spot Up Defense*
+- Freq
+- EFG%
+
+Playtype Handoff Defense*
+- Freq
+- EFG%
+
+Playtype Cut Defense*
+- Freq
+- EFG%
+
+Playtype Off Screen Defense*
+- Freq
+- EFG%
+
+Playtype Put Back Defense*
+- Freq
+- EFG%
 
 
 
