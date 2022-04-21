@@ -20,6 +20,7 @@ for i in player_data:
             isolated_data.append(append_item)
     player_data_list[isolated_data[0]] = isolated_data[7:]
 
+
 df = pd.read_csv("..//CSV_Data//Big_Boy.csv")
 
 for name in player_data_list.keys():
@@ -28,7 +29,8 @@ for name in player_data_list.keys():
             length = len(player_data_list[name])
             for i in range(1,length+1):
                 item_replace = player_data_list[name][-i]
-                df.loc[name, df.columns[-i]] = item_replace # This section is the part that needs fixing
+                row = df[df['Player'] == name].index[0]
+                df.loc[row, df.columns[-i]] = item_replace # This section is the part that needs fixing
                 
 
-df.to_csv("..//CSV_Data//Testing_CSV.csv", index=False)
+df.to_csv("..//CSV_Data//Big_Boy.csv", index=False)
