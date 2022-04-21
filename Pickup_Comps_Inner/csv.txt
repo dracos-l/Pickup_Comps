@@ -1,0 +1,86 @@
+General Scoring
+- 
+
+General Usage
+- %OREB
+- %DREB
+- %AST
+- %TOV
+- %STL
+- %BLK
+
+Playtype Isolation
+- Freq
+- EFG%
+
+Playtype Pick and Roll Man
+- Freq
+- EFG%
+
+Playtype Pick and Ball Hander
+- Freq
+- EFG%
+
+Playtype Post Up
+- Freq
+- EFG%
+
+Playtype Spot Up
+- Freq
+- EFG%
+
+Playtype Handoff
+- Freq
+- EFG%
+
+Playtype Cut
+- Freq
+- EFG%
+
+Playtype Off Screen 
+- Freq
+- EFG%
+
+Playtype Put Back
+- Freq
+- EFG%
+
+Tracking Drives
+- Drives
+- FG%
+- PTS%
+- Pass%
+- TOV%*
+
+Tracking Catch and Shoot (Do we separate three)
+- PTS
+- EFG
+
+Tracking Pull Up (Do we separate three)*
+- PTS 
+- EFG
+
+Players Defense Dashboard 3 Pointer (Instead what we could do is greater than 15ft and just make the category premeter shots)
+- Diff%
+- DFGA or Freq
+
+Players Defense Dashoard <6fr
+- Diff%
+- DFGA or Freq
+
+Players Hustle *
+- Deflections
+- Screen Assist PTS
+- Loose Balls Recovered
+
+Tracking Touches*
+- Time of Poss or Avg Sec Per Touches
+
+Shot Dashboard Closest Defender*
+
+Shot Dashboard Touch Time*
+
+Shot Dashboard Dribbles*
+
+
+

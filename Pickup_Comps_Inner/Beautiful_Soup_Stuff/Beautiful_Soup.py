@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-with open("..//HTML_Data//Players_General_Scoring.html") as fp:
+with open("..//HTML_Data//Players_General_Scoring.html", 'rb') as fp:
     soup = BeautifulSoup(fp)
 
 player_data = []
