@@ -64,57 +64,57 @@ Players Defense Dashoard <6fr
 - Diff%
 - DFGA or Freq
 
-Players Defense Dashboard 3 Pointer (Instead what we could do is greater than 15ft and just make the category premeter shots)*
+Players Defense Dashboard 15ft< (Instead what we could do is greater than 15ft and just make the category premeter shots)*
 - Diff%
 - DFGA or Freq
 
-Players Hustle *
+Players Hustle **
 - Deflections
 - Screen Assist PTS
 - Loose Balls Recovered
 
-Tracking Touches*
+Tracking Touches**
 - Time of Poss or Avg Sec Per Touches
 
 Shot Dashboard Closest Defender*
 
-Shot Dashboard Touch Time*
+Shot Dashboard Touch Time**
 
-Shot Dashboard Dribbles*
+Shot Dashboard Dribbles**
 
 Playtype Isolation Defense*
 - Freq
 - EFG%
 
-Playtype Pick and Roll Man Defense*
+Playtype Pick and Roll Man Defense**
 - Freq
 - EFG%
 
-Playtype Pick and Ball Hander Defense*
+Playtype Pick and Ball Hander Defense**
 - Freq
 - EFG%
 
-Playtype Post Up Defense*
+Playtype Post Up Defense**
 - Freq
 - EFG%
 
-Playtype Spot Up Defense*
+Playtype Spot Up Defense**
 - Freq
 - EFG%
 
-Playtype Handoff Defense*
+Playtype Handoff Defense**
 - Freq
 - EFG%
 
-Playtype Cut Defense*
+Playtype Cut Defense**
 - Freq
 - EFG%
 
-Playtype Off Screen Defense*
+Playtype Off Screen Defense**
 - Freq
 - EFG%
 
-Playtype Put Back Defense*
+Playtype Put Back Defense**
 - Freq
 - EFG%
 
