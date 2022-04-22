@@ -30,7 +30,7 @@ for name in player_data_list.keys():
             for i in range(1,length+1):
                 item_replace = player_data_list[name][-i]
                 row = df[df['Player'] == name].index[0]
-                df.loc[row, df.columns[-i]] = item_replace # This section is the part that needs fixing
+                df.loc[row, df.columns[-i]] = item_replace
                 
 
 df.to_csv("..//CSV_Data//Big_Boy.csv", index=False)

@@ -12,7 +12,7 @@ for i in headers_soup:
     item = i.get_text().replace("\n",'')
     headers_list.append(item.replace("\xa0",'').strip())
 
-df = pd.read_csv("..//CSV_Data//General_Scoring.csv")
+df = pd.read_csv("..//CSV_Data//Big_Boy.csv")
 
 for i in headers_list[4:]:
     df[i] = 0
