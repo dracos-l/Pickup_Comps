@@ -53,11 +53,11 @@ Tracking Drives
 - TOV%*
 
 Tracking Catch and Shoot (Do we separate three)
-- PTS
+- FGA
 - EFG
 
 Tracking Pull Up (Do we separate three)
-- PTS 
+- FGA
 - EFG
 
 Players Defense Dashoard <6fr
