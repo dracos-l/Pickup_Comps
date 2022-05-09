@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+            //fetch("..//JSON_Data//Player_Precentile.json")
+            //.then(response => {
+            //   return response.json();
+            //})
+            //.then(jsondata => console.log(jsondata[0]));
+
+            let similarity = 0;
+            let similarity_score = {}
+            const my_score = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
+            const weights = {
+                '%AST': 2, 
+                '%OREB': 1.2,
+                '%DREB': 1.5, 
+                '%STL': 1.1, 
+                '%BLK': 1.1, 
+                '6': 2, 
+                '15': 2, 
+                'Handoff_Off': 0.7, 
+                'Iso_Def': 2, 
+                'Iso_Off': 1, 
+                'OffScreen_Off': 0.7, 
+                'P&R_Handler_Off': 1, 
+                'P&R_Man_Off': 1, 
+                'Postup_Off': 0.9, 
+                'Putbacks_Off': 0.7, 
+                'Spotup_Off': 0.6, 
+                'Tight': 1, 
+                'Open': 1, 
+                'Catch_And_Shoot': 0.6, 
+                'Pull_Up': 1, 
+                'Drives': 1
+            }
+
+            async function loadNames() {
+
+                const response = await fetch("..//JSON_Data//Player_Precentile.json");
+                const names = await response.json();
+
+                console.log(myFunction(my_score, weights, names));
+
+                
+            }
+
+            function myFunction(my_score, weights, names) {
+                for (let i = 0; i < 351; i++) {
+                    similarity = 0
+                    similarity += (Math.abs(names[i]['%AST'] - my_score[0])*weights['%AST']);
+                    similarity += (Math.abs(names[i]['%OREB'] - my_score[1])*weights['%OREB']);
+                    similarity += (Math.abs(names[i]['%DREB'] - my_score[2])*weights['%DREB']);
+                    similarity += (Math.abs(names[i]['%STL'] - my_score[3])*weights['%STL']);
+                    similarity += (Math.abs(names[i]['%BLK'] - my_score[4])*weights['%BLK']);
+                    similarity += ((Math.abs(names[i]['FREQ_6'] - my_score[5]) + Math.abs(names[i]['Diff%_6'] - my_score[6]))*weights['6']);
+                    similarity += ((Math.abs(names[i]['FREQ_15'] - my_score[7]) + Math.abs(names[i]['Diff%_15'] - my_score[8]))*weights['15']);
+                    similarity += ((Math.abs(names[i]['Freq_Handoff_Off'] - my_score[9]) + Math.abs(names[i]['eFG%_Handoff_Off'] - my_score[10]))*weights['Handoff_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_Iso_Def'] - my_score[11]) + Math.abs(names[i]['eFG%_Iso_Def'] - my_score[12]))*weights['Iso_Def']);
+                    similarity += ((Math.abs(names[i]['Freq_Iso_Off'] - my_score[13]) + Math.abs(names[i]['eFG%_Iso_Off'] - my_score[14]))*weights['Iso_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_OffScreen_Off'] - my_score[15]) + Math.abs(names[i]['eFG%_OffScreen_Off'] - my_score[16]))*weights['OffScreen_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_P&R_Handler_Off'] - my_score[17]) + Math.abs(names[i]['eFG%_P&R_Handler_Off'] - my_score[18]))*weights['P&R_Handler_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_P&R_Man_Off'] - my_score[19]) + Math.abs(names[i]['eFG%_P&R_Man_Off'] - my_score[20]))*weights['P&R_Man_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_Postup_Off'] - my_score[21]) + Math.abs(names[i]['eFG%_Postup_Off'] - my_score[22]))*weights['Postup_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_Putbacks_Off'] - my_score[23]) + Math.abs(names[i]['eFG%_Putbacks_Off'] - my_score[24]))*weights['Putbacks_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_Spotup_Off'] - my_score[25]) + Math.abs(names[i]['eFG%_Spotup_Off'] - my_score[26]))*weights['Spotup_Off']);
+                    similarity += ((Math.abs(names[i]['Freq_Tight'] - my_score[27]) + Math.abs(names[i]['eFG%_Tight'] - my_score[28]))*weights['Tight']);
+                    similarity += ((Math.abs(names[i]['Freq_Open'] - my_score[29]) + Math.abs(names[i]['eFG%_Open'] - my_score[30]))*weights['Open']);
+                    similarity += ((Math.abs(names[i]['FGA_Catch_And_Shoot'] - my_score[31]) + Math.abs(names[i]['EFG%_Catch_And_Shoot'] - my_score[32]))*weights['Catch_And_Shoot']);
+                    similarity += ((Math.abs(names[i]['FGA_Pull_Up'] - my_score[33]) + Math.abs(names[i]['EFG%_Pull_Up'] - my_score[34]))*weights['Pull_Up']);
+                    similarity += ((Math.abs(names[i]['DRIVES_Drives'] - my_score[35]) + Math.abs(names[i]['FG%_Drives'] - my_score[36]))*weights['Drives']);
+                    similarity_score[names[i]['Player']] = Math.round(similarity/41.3);
+                }
+                console.log(similarity_score);
+                console.log(similarity_score[minimum(similarity_score)]);
+                return minimum(similarity_score);
+            }
+
+            function minimum(scores){
+                // get object keys array
+                var keys = Object.keys(scores),
+                // set initial value as first elemnt in array
+                    res = keys[0];
+
+                // iterate over array elements
+                keys.forEach(function(v) {
+                // compare with current property value and update with the min value property
+                    res = + scores[res] > +scores[v] ? v : res;
+                });
+
+                return res;
+            };
+
+            loadNames();
+        </script>
+        
+    </body>
+</html>
