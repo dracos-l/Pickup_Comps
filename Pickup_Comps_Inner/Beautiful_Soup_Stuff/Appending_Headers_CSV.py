@@ -2,11 +2,11 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 # I would replace the path here with each HTML page we needed, going one by one
-with open("..//HTML_Data//Player_Tracking_Pull_Up.html") as fp:
+with open("..//HTML_Data//Player_Bio.html", 'rb') as fp:
     soup = BeautifulSoup(fp)
 
 # Getting all of the headers from whichever file I am looking at
-headers_soup = soup.findAll("dt")
+headers_soup = soup.findAll("th")
 
 headers_list = []
 
@@ -24,7 +24,7 @@ df = pd.read_csv("..//CSV_Data//Big_Boy.csv")
 
 # Iterating through the headers list, only using the relevant tags, then
 # filling it up with 0's
-for i in headers_list[4:]:
+for i in headers_list[2:]:
     df[i] = 0
 
 # Then exporting it to "Testing_CSV", which is a separate CSV that I'll use

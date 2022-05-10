@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-with open("..//HTML_Data//Player_Tracking_Pull_Up.html") as fp:
+with open("..//HTML_Data//Player_Bio.html", 'rb') as fp:
     soup = BeautifulSoup(fp)
 
 player_data = []
@@ -22,7 +22,7 @@ for i in player_data:
         append_item = c.get_text().replace('\n','').replace('            ','').replace('          ','').replace('-','0.0')
         if append_item != '':
             isolated_data.append(append_item.replace('%',''))
-    player_data_list[isolated_data[0]] = isolated_data[6:24]
+    player_data_list[isolated_data[0]] = isolated_data[2:]
 
 # Checking that the dictionary matches the actual page before adding it
 #print(player_data_list)
