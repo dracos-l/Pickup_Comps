@@ -25,7 +25,7 @@ const weights = {
 
 async function loadNames(my_score) {
 
-    const response = await fetch("..//..//JSON_Data//Player_Precentile.json");
+    const response = await fetch("..//..//..//JSON_Data//Player_Precentile.json");
     const names = await response.json();
 
 

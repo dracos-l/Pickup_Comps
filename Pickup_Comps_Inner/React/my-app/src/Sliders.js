@@ -1,3 +1,7 @@
+import loadNames from "./calculation";
+import React from "react";
+import ReactDOM from 'react-dom';
+
 class Form extends React.Component {
     constructor(props) {
       super(props);
@@ -14,7 +18,7 @@ class Form extends React.Component {
     }
   
     handleSubmit(event) {
-      myFunction(this.state.values)
+      console.log(loadNames(this.state.values));
       event.preventDefault();
     }
   
@@ -66,3 +70,5 @@ class Form extends React.Component {
   
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(<Form />);
+
+export default Form
