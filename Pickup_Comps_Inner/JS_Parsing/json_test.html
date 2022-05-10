@@ -3,14 +3,7 @@
     <body>
         
         <script>
-            //fetch("..//JSON_Data//Player_Precentile.json")
-            //.then(response => {
-            //   return response.json();
-            //})
-            //.then(jsondata => console.log(jsondata[0]));
 
-            let similarity = 0;
-            let similarity_score = {}
             const my_score = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
             const weights = {
                 '%AST': 2, 
@@ -36,17 +29,22 @@
                 'Drives': 1
             }
 
-            async function loadNames() {
+            async function loadNames(my_score, weights) {
 
                 const response = await fetch("..//JSON_Data//Player_Precentile.json");
                 const names = await response.json();
 
+        
                 console.log(myFunction(my_score, weights, names));
 
                 
             }
 
             function myFunction(my_score, weights, names) {
+                let similarity = 0;
+                let similarity_score = {}
+                let similarity_score_array = []
+
                 for (let i = 0; i < 351; i++) {
                     similarity = 0
                     similarity += (Math.abs(names[i]['%AST'] - my_score[0])*weights['%AST']);
@@ -73,9 +71,16 @@
                     similarity_score[names[i]['Player']] = Math.round(similarity/41.3);
                 }
                 console.log(similarity_score);
-                console.log(similarity_score[minimum(similarity_score)]);
-                return minimum(similarity_score);
+                let five_people = {}
+                let edit_similarity_score = similarity_score;
+                for (let i = 0; i < 5; i++){
+                    five_people[minimum(edit_similarity_score)] = edit_similarity_score[minimum(edit_similarity_score)];
+                    delete edit_similarity_score[minimum(edit_similarity_score)];
+                }
+
+                return five_people
             }
+
 
             function minimum(scores){
                 // get object keys array
@@ -92,7 +97,9 @@
                 return res;
             };
 
-            loadNames();
+
+            loadNames(my_score, weights);
+            
         </script>
         
     </body>
