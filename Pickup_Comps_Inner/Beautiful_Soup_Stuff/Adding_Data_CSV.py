@@ -7,7 +7,9 @@ with open("..//HTML_Data//Player_Bio.html", 'rb') as fp:
 player_data = []
 
 for i in range(0,351):
-    player_data.append(soup.findAll("tr", {"index" : i})[0])
+    player_data.append(soup.findAll("tr", {"index" : i}))
+
+print(player_data)
 
 player_data_list = {}
 
@@ -22,7 +24,7 @@ for i in player_data:
         append_item = c.get_text().replace('\n','').replace('            ','').replace('          ','').replace('-','0.0')
         if append_item != '':
             isolated_data.append(append_item.replace('%',''))
-    player_data_list[isolated_data[0]] = isolated_data[2:]
+    player_data_list[isolated_data[0]] = isolated_data[6:24]
 
 # Checking that the dictionary matches the actual page before adding it
 #print(player_data_list)

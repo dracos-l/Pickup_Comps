@@ -36,7 +36,6 @@ async function loadNames(my_score) {
 function calculation(my_score, names) {
     let similarity = 0;
     let similarity_score = {}
-    let similarity_score_array = []
 
     for (let i = 0; i < 351; i++) {
         similarity = 0
