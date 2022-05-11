@@ -23,11 +23,9 @@ const weights = {
     'Drives': 1
 }
 
-async function loadNames(my_score) {
+function loadNames(my_score) {
 
-    const response = await fetch("..//..//..//JSON_Data//Player_Precentile.json");
-    const names = await response.json();
-
+    const names = require(".//JSON_Data//Player_Precentile.json");
 
     return calculation(my_score, names);
     
@@ -36,7 +34,6 @@ async function loadNames(my_score) {
 function calculation(my_score, names) {
     let similarity = 0;
     let similarity_score = {}
-    let similarity_score_array = []
 
     for (let i = 0; i < 351; i++) {
         similarity = 0
