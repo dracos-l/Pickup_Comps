@@ -1,4 +1,4 @@
-const my_score = {'%AST':50, '%OREB':50, '%DREB':50, '%STL':50, '%BLK':50, 'Freq_6':50, 'Diff%_6':50, 'Freq_15':50, 'Diff%_15':50, 'Freq_Handoff_Off':50, 'eFG%_Handoff_Off':50, 'Freq_Iso_Def':50, 'eFG%_Iso_Def':50, 'Freq_Iso_Off':50, 'eFG%_Iso_Off':50, 'Freq_OffScreen_Off':50, 'eFG%_OffScreen_Off':50, 'Freq_P&R_Handler_Off':50, 'eFG%_P&R_Handler_Off':50, 'Freq_P&R_Man_Off':50, 'eFG%_P&R_Man_Off':50, 'Freq_Postup_Off':50, 'eFG%_Postup_Off':50, 'Freq_Putbacks_Off':50, 'eFG%_Putbacks_Off':50, 'Freq_Spotup_Off':50, 'eFG%_Spotup_Off':50, 'Freq_Tight':50, 'eFG%_Tight':50, 'Freq_Open':50, 'eFG%_Open':50, 'FGA_Catch_And_Shoot':50, 'EFG%_Catch_And_Shoot':50, 'FGA_Pull_Up':50, 'EFG%_Pull_Up':50, 'DRIVES_Drives':50, 'FG%_Drives':50};
+const my_score = {'%AST':50, '%OREB':50, '%DREB':50, '%STL':50, '%BLK':50, 'Freq_6':50, 'Diff%_6':50, 'Freq_15':50, 'Diff%_15':50, 'Freq_Handoff_Off':50, 'eFG%_Handoff_Off':50, 'Freq_Iso_Def':50, 'eFG%_Iso_Def':50, 'Freq_Iso_Off':50, 'eFG%_Iso_Off':50, 'Freq_OffScreen_Off':50, 'eFG%_OffScreen_Off':50, 'Freq_P&R_Handler_Off':50, 'eFG%_P&R_Handler_Off':50, 'Freq_P&R_Man_Off':50, 'eFG%_P&R_Man_Off':50, 'Freq_Postup_Off':50, 'eFG%_Postup_Off':50, 'Freq_Putbacks_Off':50, 'eFG%_Putbacks_Off':50, 'Freq_Spotup_Off':50, 'eFG%_Spotup_Off':50, 'Freq_Tight':50, 'eFG%_Tight':50, 'Freq_Open':50, 'eFG%_Open':50, 'FGA_Catch_And_Shoot':50, 'EFG%_Catch_And_Shoot':50, 'FGA_Pull_Up':50, 'EFG%_Pull_Up':50, 'DRIVES_Drives':50, 'FG%_Drives':50, 'Height': 68};
 const weights = {
     '%AST': 2, 
     '%OREB': 1.2,
@@ -20,7 +20,8 @@ const weights = {
     'Open': 1, 
     'Catch_And_Shoot': 0.6, 
     'Pull_Up': 1, 
-    'Drives': 1
+    'Drives': 1,
+    'Height': 5
 }
 
 function loadNames(my_score) {
@@ -58,7 +59,8 @@ function calculation(my_score, names) {
         similarity += ((Math.abs(names[i]['FGA_Catch_And_Shoot'] - my_score['FGA_Catch_And_Shoot']) + Math.abs(names[i]['EFG%_Catch_And_Shoot'] - my_score['EFG%_Catch_And_Shoot']))*weights['Catch_And_Shoot']);
         similarity += ((Math.abs(names[i]['FGA_Pull_Up'] - my_score['FGA_Pull_Up']) + Math.abs(names[i]['EFG%_Pull_Up'] - my_score['EFG%_Pull_Up']))*weights['Pull_Up']);
         similarity += ((Math.abs(names[i]['DRIVES_Drives'] - my_score['DRIVES_Drives']) + Math.abs(names[i]['FG%_Drives'] - my_score['FG%_Drives']))*weights['Drives']);
-        similarity_score[names[i]['Player']] = Math.round(similarity/41.3);
+        similarity += ((Math.abs(names[i]['Height'] - (my_score['Height']+9))*weights['Height']))
+        similarity_score[names[i]['Player']] = Math.round(similarity/42.3);
     }
     let five_people = {}
     let edit_similarity_score = similarity_score;
