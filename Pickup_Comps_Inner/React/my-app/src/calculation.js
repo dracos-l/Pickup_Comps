@@ -26,7 +26,7 @@ const weights = {
 
 function loadNames(my_score) {
 
-    const names = require(".//JSON_Data//Final_Final_Player_Precentile.json");
+    const names = require(".//JSON_Data//Final_Player_Precentile.json");
 
     return calculation(my_score, names);
     
