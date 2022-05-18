@@ -11,6 +11,14 @@ h2{
     color:#ff4500;
 }
 
+h3{
+    width: 100%;
+    margin: auto;
+    padding: 0.25rem 9999rem;
+    background: rgba(56, 56, 142, 0.635);
+    margin: 0 -9999rem;
+}
+
 p{
     color:rgb(103, 172, 232);
     font-size: 16px;
@@ -63,4 +71,22 @@ input[type="range"] {
     padding: 0.25rem 9999rem;
     background: rgba(7, 7, 99, 0.635);
     margin: 0 -9999rem;
+  }
+
+  #output_name{
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 1.6;
+  }
+
+  .first{
+    color: #ff4411;
+  }
+
+  .second{
+    color: #fc6e46;
+  }
+
+  .third{
+    color: #fe977b;
   }
