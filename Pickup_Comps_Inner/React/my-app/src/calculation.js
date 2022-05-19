@@ -22,7 +22,7 @@ const weights = {
     'Pull_Up': 1, //2
     'Drives': 1, //2
     'Height': 5*5 //1
-    //Passing: 7.5
+    //Passing: 5
     //Shot Difficulty: 8
     //Scoring Type: 17
     //Rebound: 5
@@ -66,7 +66,7 @@ function calculation(my_score, names) {
         similarity += ((Math.abs(names[i]['FGA_Pull_Up'] - my_score['FGA_Pull_Up']) + Math.abs(names[i]['EFG%_Pull_Up'] - my_score['EFG%_Pull_Up']))*weights['Pull_Up']);
         similarity += ((Math.abs(names[i]['DRIVES_Drives'] - my_score['DRIVES_Drives']) + Math.abs(names[i]['FG%_Drives'] - my_score['FG%_Drives']))*weights['Drives']);
         similarity += ((Math.abs(names[i]['Height'] - (my_score['Height']+9))*weights['Height']))
-        similarity_score[names[i]['Player']] = Math.round(similarity/62.5);
+        similarity_score[names[i]['Player']] = Math.round(similarity/60);
     }
     let five_people = {}
     let edit_similarity_score = similarity_score;
