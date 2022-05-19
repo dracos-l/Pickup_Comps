@@ -12,11 +12,10 @@ h2{
 }
 
 h3{
-    width: 100%;
-    margin: auto;
-    padding: 0.25rem 9999rem;
+    width: 1460px;
+    height: 25px;
+    margin-left: -60px;
     background: rgba(56, 56, 142, 0.635);
-    margin: 0 -9999rem;
     color:#ff4500;
 }
 
@@ -28,7 +27,7 @@ p{
 
 input[type="range"] {
     -webkit-appearance: none;
-    margin-right: 15px;
+    margin-right: 10px;
     width: 200px;
     height: 7px;
     background: rgba(255, 255, 255, 0.6);
@@ -58,7 +57,7 @@ input[type="range"] {
 
   input[type=submit] {
     padding:5px 15px; 
-    background:#ccc; 
+    background:#ccc;
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
@@ -66,12 +65,10 @@ input[type="range"] {
 }
 
   .wrap {
-    width: 100%;
+    width: 1440px;
     height: 60px;
-    margin: auto;
-    padding: 0.25rem 9999rem;
+    margin-left: -40px;
     background: rgba(7, 7, 99, 0.635);
-    margin: 0 -9999rem;
   }
 
   #output_name{
