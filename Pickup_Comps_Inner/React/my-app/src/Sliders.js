@@ -13,7 +13,7 @@ class Form extends React.Component {
         'BLK_Question': 'What is your Block Percentile?', 
         'Freq_6_Question': 'How often do people attack you in the paint (Frequency of Defending Shots within Six Feet)?', 
         'Diff_6_Question': 'How well do you defend the paint?', 
-        'Freq_15_Question': 'How often are you running around the perimeter (Frequency of Defending Shots outside Fifteen Feet', 
+        'Freq_15_Question': 'How often are you running around the perimeter (Frequency of Defending Shots outside Fifteen Feet)?', 
         'Diff_15_Question': 'How well do you defend the perimeter?', 
         'Freq_Handoff_Off_Question': 'How often to do you get handoffs (Handoff Frequency Percentile)?', 
         'eFG_Handoff_Off_Question': 'How good are you at scoring off handoffs (Handoff Efficiency Percentile)?', 
@@ -57,6 +57,7 @@ class Form extends React.Component {
     }
   
     handleSubmit(event) {
+      console.log(loadNames(this.state.values))
       this.setState({final:(loadNames(this.state.values))});
       this.setState({checkVal:(true)});
       console.log(this.state.final);
