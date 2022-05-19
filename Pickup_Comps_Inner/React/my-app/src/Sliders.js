@@ -28,9 +28,9 @@ class Form extends React.Component {
         'Freq_P&R_Man_Off_Question': 'How often are you the rollman in the pick and roll (P&R Man Frequency Percentile)?', 
         'eFG_P&R_Man_Off_Question': 'Are you Ayton after setting a screen or are you Trae if he tried to set a screen (P&R Mabn Efficinecy Percentile)?', 
         'Freq_Postup_Off_Question': 'Do you get your big butt in the paint (What Charles Barkely says Embiid should do more) (Postup Frequency Percentile)?', 
-        'eFG_Postup_Off_Question': 'Do you have Hakeems post moves (Postup Efficiency Percentile)?', 
+        'eFG_Postup_Off_Question': "Do you have Hakeem's post moves (Postup Efficiency Percentile)?",
         'Freq_Putbacks_Off_Question': 'How often you going for the putback (Putback Frequency Percentile)?', 
-        'eFG_Putbacks_Off_Question': 'Are you like Al Horford after Jaylen Brown misses in game 5 Bucks versus Celtics 2022 (Putback Efficiency Percentile)?', 
+        'eFG_Putbacks_Off_Question': 'Are you a putback beast (Putback Efficiency Percentile)?', 
         'Freq_Spotup_Off_Question': 'How often do you spotup (Spotup Frequency Percentile)?', 
         'eFG_Spotup_Off_Question': 'How good are you at spotting up (Spotup Efficiency Percentile)?', 
         'Freq_Tight_Question': 'How often do you take what coach calls bad shots (Tight Shot Frequency Percentile)?', 
@@ -39,10 +39,10 @@ class Form extends React.Component {
         'eFG_Open_Question': 'How often do you make the defense pay (Open Shot Efficiency Percentile)?', 
         'FGA_Catch_And_Shoot_Question': 'How often is someone kicking out to you (Catch and Shoot Frequency Percentile)?', 
         'EFG_Catch_And_Shoot_Question': 'Are you the type of player Lebron likes to play with (Catch and Shoot Efficiency Percentile)?', 
-        'FGA_Pull_Up_Question': 'How often to you pull up (Pull up Frequency Percentile)?', 
-        'EFG_Pull_Up_Question': 'Are you just like Derozan, when you shoot it does it go in (Pull up Efficiency Percentile)?',
-        'Drives_Question': 'How often to drive to the basket (Drive Frequency Percentile)?', 
-        'FG%_Drives_Question': 'How easily to you score driving (Drive Efficiency Percentile)?', 
+        'FGA_Pull_Up_Question': 'How often do you pull up (Pull up Frequency Percentile)?', 
+        'EFG_Pull_Up_Question': 'Are you just like Derozan, when you shoot it does it goes in (Pull up Efficiency Percentile)?',
+        'Drives_Question': 'How often do you drive to the basket (Drive Frequency Percentile)?', 
+        'FG%_Drives_Question': 'How easily do you score driving (Drive Efficiency Percentile)?', 
         'Height_Question': 'How tall are you in inches?'
       }};
       this.handleChange = this.handleChange.bind(this);
