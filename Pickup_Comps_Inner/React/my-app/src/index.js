@@ -2,17 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Form from './Sliders.js';
-import Header from './Header.js';
-import Footer from "./footer_components";
+import App from './App.js'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-    <Form />
-    <Footer />
+    <App />
   </React.StrictMode>
 );
 

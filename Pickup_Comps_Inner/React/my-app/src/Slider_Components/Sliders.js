@@ -1,4 +1,4 @@
-import loadNames from "./calculation";
+import loadNames from "../calculation";
 import React from "react";
 
 class Form extends React.Component {
@@ -20,13 +20,13 @@ class Form extends React.Component {
         'Freq_Iso_Def_Question': 'How often do you get called out for an Iso (Defensive Iso Frequency Percentile)', 
         'eFG_Iso_Def_Question': 'How well do you defend the Iso (Defensive Iso Efficiency Percentile)?', 
         'Freq_Iso_Off_Question': 'How often you calling for the Iso (Offensive Iso Frequency Percentile)?', 
-        'eFG_Iso_Off_Question': 'How well are you in the Iso (Offensive Iso Efficiency Percentile)?', 
-        'Freq_OffScreen_Off_Question': 'How often are you unlocking your in Klay and coming off offscreens (Offscreen Freqency Percentile)?', 
+        'eFG_Iso_Off_Question': 'How good are you in the Iso (Offensive Iso Efficiency Percentile)?', 
+        'Freq_OffScreen_Off_Question': 'How often are you unlocking your inner Klay and coming off offscreens (Offscreen Freqency Percentile)?', 
         'eFG_OffScreen_Off_Question': 'Are you like Curry coming off an offscreen or more Jokiam Noah (Offscreen Efficiency Percentile)?', 
         'Freq_P&R_Handler_Off_Question': 'How often are you the ballhandler in the pick and roll (P&R Handler Frequency Percentile)?', 
         'eFG_P&R_Handler_Off_Question': 'Are you a bucket in the pick and roll as the ballhander (P&R Handler Efficiency Percentile)?', 
         'Freq_P&R_Man_Off_Question': 'How often are you the rollman in the pick and roll (P&R Man Frequency Percentile)?', 
-        'eFG_P&R_Man_Off_Question': 'Are you Ayton after setting a screen or are you Trae if he tried to set a screen (P&R Mabn Efficinecy Percentile)?', 
+        'eFG_P&R_Man_Off_Question': 'Are you Ayton after setting a screen or are you Trae if he tried to set a screen (P&R Man Efficinecy Percentile)?', 
         'Freq_Postup_Off_Question': 'Do you get your big butt in the paint (What Charles Barkely says Embiid should do more) (Postup Frequency Percentile)?', 
         'eFG_Postup_Off_Question': "Do you have Hakeem's post moves (Postup Efficiency Percentile)?",
         'Freq_Putbacks_Off_Question': 'How often you going for the putback (Putback Frequency Percentile)?', 
@@ -66,10 +66,11 @@ class Form extends React.Component {
 
     renderComp(names,index){
       if(this.state.checkVal){
-        let list_print = ["Your are literally ", "Your second closest comparision is ", "Your third closest comparision is "]
+        let list_print = ["You are literally ", "Your second closest comparision is ", "Your third closest comparision is "]
         let list_stuff = []
         for (let k in names) {
-          list_stuff.push(k + " and you're off by " + names[k] + ' average points')
+          let similarity_per = 100-names[k]
+          list_stuff.push(k + " and you are " + similarity_per + '% similar')
         }
         return(list_print[index] + list_stuff[index])
       }else{
