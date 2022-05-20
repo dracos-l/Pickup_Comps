@@ -13,12 +13,12 @@ function Footer () {
       <section className="footer-info">
         <section className="footer-info-left">
           <section className="footer-info__name">
-            Software Engineers: Ethan and Logan
+            Software Engineers: Ethan Waggoner and Logan Dracos
           </section>    
         </section>
         <section className="footer-info-center">
           <section className="footer-info__email">
-            <a href = '/'>Contact Us</a>
+            <a href = './About.html'>About</a>
           </section>
         </section>
         <section className="footer-info-right">

@@ -20,7 +20,7 @@ class Header extends React.Component {
               you thinking about exactly which skill you are thinking of, and try to be modest! Placing yourself too high will only <b>skew your result,
               not give you a better player.</b> <br /><br /> Have fun! Hopefully you get LeBron like you've been saying for years. <br /><br />
               Note: At the bottom is Height, which you should do in inches(ex: 6 feet is 72 inches).
-            </p> 
+            </p>
         </div>
         );
     }

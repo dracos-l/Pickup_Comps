@@ -127,7 +127,7 @@ class Form extends React.Component {
                   <h3>Height</h3>
                   <br />           <label>             {this.text.questions['Height_Question']}             <br /> <input type='number' onChange={(event) => this.handleChange(event,'Height')}  />             <output>{this.state.values['Height']}</output>           </label> <br /><br />
                   <br />  
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit"/>
                 <br /><br /><br />
                 <output id='output_name' class='first'>{this.renderComp(this.state.final,0)}</output> <br />
                 <output id='output_name' class='second'>{this.renderComp(this.state.final,1)}</output> <br />
