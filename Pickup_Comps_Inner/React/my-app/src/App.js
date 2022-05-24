@@ -1,6 +1,6 @@
 import Headers from './/Header_Components//Header.js';
 import Form from './/Slider_Components//Sliders.js';
-import Footer from './/footer_components//Footer.jsx';
+import Footer from './/Footer_Components//Footer.jsx';
 import './App.css';
 
 function App() {
