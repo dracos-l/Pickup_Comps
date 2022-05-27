@@ -1,14 +1,21 @@
-import Headers from './/Header_Components//Header.js';
-import Form from './/Slider_Components//Sliders.js';
+
 import Footer from './/Footer_Components//Footer.jsx';
+import About from './/Footer_Components//About.js';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import INDEX_PAGE from './INDEX_PAGE.jsx';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Headers />
-      <Form />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={ <Footer /> }>
+            <Route index element={(<INDEX_PAGE/>)} />
+            <Route path="about" element={<About />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

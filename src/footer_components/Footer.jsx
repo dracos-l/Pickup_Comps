@@ -1,10 +1,12 @@
 import React from 'react';
-
+import { Outlet } from "react-router-dom";
 import './Footer.css';
 
 function Footer () {
 
   return (
+    <>
+    <Outlet />
     <section className="footer">
       <hr className="footer-seperator" />
       <section className="footer-social-media">
@@ -18,7 +20,7 @@ function Footer () {
         </section>
         <section className="footer-info-center">
           <section className="footer-info__email">
-            <a href = './About.html'>About</a>
+            <a href = './about'>About</a>
           </section>
         </section>
         <section className="footer-info-right">
@@ -29,6 +31,7 @@ function Footer () {
       </section>
       <hr className="footer-seperator" />
     </section>
+    </>
   )
 
 }
