@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.b05a6176.css",
-    "main.js": "/react-gh-pages/static/js/main.f5db2ff3.js",
-    "static/js/787.28cb0dcd.chunk.js": "/react-gh-pages/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.b05a6176.css.map": "/react-gh-pages/static/css/main.b05a6176.css.map",
-    "main.f5db2ff3.js.map": "/react-gh-pages/static/js/main.f5db2ff3.js.map",
-    "787.28cb0dcd.chunk.js.map": "/react-gh-pages/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/Pickup_Comps/static/css/main.560f1db5.css",
+    "main.js": "/Pickup_Comps/static/js/main.0e2e79cb.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Pickup_Comps/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/Pickup_Comps/index.html",
+    "main.560f1db5.css.map": "/Pickup_Comps/static/css/main.560f1db5.css.map",
+    "main.0e2e79cb.js.map": "/Pickup_Comps/static/js/main.0e2e79cb.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Pickup_Comps/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b05a6176.css",
-    "static/js/main.f5db2ff3.js"
+    "static/css/main.560f1db5.css",
+    "static/js/main.0e2e79cb.js"
   ]
 }
