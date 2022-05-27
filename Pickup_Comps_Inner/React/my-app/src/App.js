@@ -9,6 +9,7 @@ import Navbar from './Navbar_Components/Navbar.js';
 function App() {
   return (
     <div>
+      <Navbar/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={ <Footer /> }>
