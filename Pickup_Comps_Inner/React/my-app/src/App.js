@@ -4,6 +4,7 @@ import About from './/Footer_Components//About.js';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import INDEX_PAGE from './INDEX_PAGE.jsx';
 import './App.css';
+import Navbar from './Navbar_Components/Navbar.js';
 
 function App() {
   return (

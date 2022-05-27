@@ -1,11 +1,12 @@
 import React from 'react';
-import {  Link } from "react-router-dom";
-const navbar= () =>{
+import './Navbar.css';
+
+const Navbar= () =>{
   return (
-    <div>
-        <li>
-            <Link to="/">Dogs</Link>
-        </li>
+    <div class="topnav">
+      <a class="active" href="/">Pickup Basketball Comps</a>
     </div>
   );
-  }
+}
+  
+export default Navbar;
