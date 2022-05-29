@@ -39,7 +39,7 @@
   text-align: start;
 }
 
-.footer-info__email{
+.footer-info__about{
   text-align: center;
 }
 
@@ -59,3 +59,23 @@ a{
   color: rgb(103, 172, 232);
 }
 
+.navbar {
+  position: absolute; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  justify-content: center;
+  width: 100%;
+  background: rgba(56, 56, 142, 0.635);
+}
+.navbar-h1{
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-a{
+  color: #ff4500;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: white;
+
+}

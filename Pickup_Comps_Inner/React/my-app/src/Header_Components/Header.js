@@ -8,7 +8,9 @@ class Header extends React.Component {
             
 
             <br />
-
+            <br />
+            <br />
+            <br />
             
             <p> 
               Welcome to our <b>Pickup Basketball Comp Page</b>! This is a website that is meant to tell you exactly who you play like
