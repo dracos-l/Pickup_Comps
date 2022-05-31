@@ -1,12 +1,17 @@
 import React from 'react';
 import { Outlet } from "react-router-dom";
-import './Footer.css';
+import './Nav+Footer.css';
 
 function Footer () {
 
   return (
     <>
     <Outlet />
+    <nav className = 'navbar'>
+      <h1 className="navbar-h1">
+        <a href = '/' className='navbar-a'>Pickup Basketball Comps  </a>
+     </h1>
+    </nav>
     <section className="footer">
       <hr className="footer-seperator" />
       <section className="footer-social-media">
@@ -19,13 +24,13 @@ function Footer () {
           </section>    
         </section>
         <section className="footer-info-center">
-          <section className="footer-info__email">
+          <section className="footer-info__about">
             <a href = './about'>About</a>
           </section>
         </section>
         <section className="footer-info-right">
           <section className="footer-info__story">
-            <a href = '/'>Our Story</a>
+            <a href = '/navbar'>Our Story</a>
           </section>
         </section>
       </section>
