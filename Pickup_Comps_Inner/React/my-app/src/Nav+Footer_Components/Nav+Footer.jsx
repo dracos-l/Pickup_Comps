@@ -30,7 +30,7 @@ function Footer () {
         </section>
         <section className="footer-info-right">
           <section className="footer-info__story">
-            <a href = '/navbar'>Our Story</a>
+            <a href = '/our_story'>Our Story</a>
           </section>
         </section>
       </section>
