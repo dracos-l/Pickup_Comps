@@ -16,7 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <NavFooter /> }>
+          <Route path="/Pickup_Comps" element={ <NavFooter /> }>
             <Route index element={(<INDEX_PAGE/>)} />
             <Route path="about" element={<About />} />
             <Route path="our_story" element={<OurStory />} />

@@ -16,7 +16,7 @@ function Footer () {
     <Outlet />
     <nav className = 'navbar'> 
       <h1 className="navbar-h1">
-        <a href = '/' className='navbar-a'>Pickup Basketball Comps</a>
+        <a href = '/Pickup_Comps' className='navbar-a'>Pickup Basketball Comps</a>
      </h1>
     </nav>
     <section className="footer">
