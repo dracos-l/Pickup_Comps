@@ -1,10 +1,17 @@
 import loadNames from "../calculation";
 import React from "react";
 
+/**
+ * This is the Form class, which  the headers of each section, the sliders, the submit button, and
+ * the output.
+ */
 class Form extends React.Component {
+  // This.text is a holder for all the questions. This.state has three components. state.checkVal is
+  // for rendering the output. state.final is a holder for the names of the players. state.values
+  // is for the values of the sliders.
     constructor(props) {
       super(props);
-      this.state = {checkVal:false,final: {}, values: {'%AST':50, '%OREB':50, '%DREB':50, '%STL':50, '%BLK':50, 'Freq_6':50, 'Diff%_6':50, 'Freq_15':50, 'Diff%_15':50, 'Freq_Handoff_Off':50, 'eFG%_Handoff_Off':50, 'Freq_Iso_Def':50, 'eFG%_Iso_Def':50, 'Freq_Iso_Off':50, 'eFG%_Iso_Off':50, 'Freq_OffScreen_Off':50, 'eFG%_OffScreen_Off':50, 'Freq_P&R_Handler_Off':50, 'eFG%_P&R_Handler_Off':50, 'Freq_P&R_Man_Off':50, 'eFG%_P&R_Man_Off':50, 'Freq_Postup_Off':50, 'eFG%_Postup_Off':50, 'Freq_Putbacks_Off':50, 'eFG%_Putbacks_Off':50, 'Freq_Spotup_Off':50, 'eFG%_Spotup_Off':50, 'Freq_Tight':50, 'eFG%_Tight':50, 'Freq_Open':50, 'eFG%_Open':50, 'FGA_Catch_And_Shoot':50, 'EFG%_Catch_And_Shoot':50, 'FGA_Pull_Up':50, 'EFG%_Pull_Up':50, 'DRIVES_Drives':50, 'FG%_Drives':50, 'Height':50}};
+      this.state = {checkVal:false, final: {}, values: {'%AST':50, '%OREB':50, '%DREB':50, '%STL':50, '%BLK':50, 'Freq_6':50, 'Diff%_6':50, 'Freq_15':50, 'Diff%_15':50, 'Freq_Handoff_Off':50, 'eFG%_Handoff_Off':50, 'Freq_Iso_Def':50, 'eFG%_Iso_Def':50, 'Freq_Iso_Off':50, 'eFG%_Iso_Off':50, 'Freq_OffScreen_Off':50, 'eFG%_OffScreen_Off':50, 'Freq_P&R_Handler_Off':50, 'eFG%_P&R_Handler_Off':50, 'Freq_P&R_Man_Off':50, 'eFG%_P&R_Man_Off':50, 'Freq_Postup_Off':50, 'eFG%_Postup_Off':50, 'Freq_Putbacks_Off':50, 'eFG%_Putbacks_Off':50, 'Freq_Spotup_Off':50, 'eFG%_Spotup_Off':50, 'Freq_Tight':50, 'eFG%_Tight':50, 'Freq_Open':50, 'eFG%_Open':50, 'FGA_Catch_And_Shoot':50, 'EFG%_Catch_And_Shoot':50, 'FGA_Pull_Up':50, 'EFG%_Pull_Up':50, 'DRIVES_Drives':50, 'FG%_Drives':50, 'Height':50}};
       this.text = {questions : {
         'AST_Question': "What is your Assist Percentile?", 
         'OREB_Question': 'Are you Rodman when Jordan misses a shot or you just Isaiah Thomas (Offensive Rebound Percentile)?', 
@@ -49,21 +56,21 @@ class Form extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);  
     } 
     
-  
+    // Regular handleChange function, had to slightly modify to deal with the sliders
     handleChange(event,var_change) {
       const newState = this.state.values
       newState[var_change] = parseInt(event.target.value)
       this.setState({values:newState});
     }
   
+    //Changing state.final to hold the names and making state.checkVal true to display the names
     handleSubmit(event) {
-      console.log(loadNames(this.state.values))
       this.setState({final:(loadNames(this.state.values))});
       this.setState({checkVal:(true)});
-      console.log(this.state.final);
       event.preventDefault();
     } 
 
+    // Renders the names of the similar players in the outputs, this is mostly styling stuff
     renderComp(names,index){
       if(this.state.checkVal){
         let list_print = ["You are literally ", "Your second closest comparision is ", "Your third closest comparision is "]
@@ -77,7 +84,8 @@ class Form extends React.Component {
         return('')
     }
     }
-  
+    
+    // Render function, loads all the headers, sliders, submit, and output. Sorry for bad formatting
     render() {
       return (
                 <form onSubmit={this.handleSubmit}>
