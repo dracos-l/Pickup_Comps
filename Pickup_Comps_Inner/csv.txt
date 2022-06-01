@@ -1,3 +1,5 @@
+// This was a list of all the potential stats we were going to look at
+
 General Scoring
 - 
 
