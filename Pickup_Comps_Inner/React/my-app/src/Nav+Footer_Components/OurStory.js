@@ -5,7 +5,7 @@ const Home = () => {
       <br/>
       <br/>
       <br/>
-      <h1>Home</h1>
+      <p>Logan and I are two of the biggest fans of basketball in the world. </p>
       </>
     )
   };
