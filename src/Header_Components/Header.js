@@ -1,14 +1,16 @@
 import React from "react";
 import './Headers.css';
-
+//<h2 class="wrap"> Pickup Basketball Comps</h2>
 class Header extends React.Component {
     render() {
       return(
         <div>
-            <h2 class="wrap"> Pickup Basketball Comps</h2>
+            
 
             <br />
-
+            <br />
+            <br />
+            <br />
             
             <p> 
               Welcome to our <b>Pickup Basketball Comp Page</b>! This is a website that is meant to tell you exactly who you play like

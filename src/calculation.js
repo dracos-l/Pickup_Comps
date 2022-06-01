@@ -35,12 +35,18 @@ function loadNames(my_score) {
     const names = require(".//JSON_Data//Final_Final_Player_Precentile.json");
 
     return calculation(my_score, names);
-    
+    // This gets the data from the json file
 }
 
 function calculation(my_score, names) {
     let similarity = 0;
     let similarity_score = {}
+
+    /*
+    this is a loop that calculates your similarity to each player
+    It does this by going through each stat and takes the absolute value of the precentile you submitted versus the players precentile. \
+    It then multiples that number by the weight of the stat and adds it to your similarity score
+    */
 
     for (let i = 0; i < 351; i++) {
         similarity = 0
@@ -65,11 +71,14 @@ function calculation(my_score, names) {
         similarity += ((Math.abs(names[i]['FGA_Catch_And_Shoot'] - my_score['FGA_Catch_And_Shoot']) + Math.abs(names[i]['EFG%_Catch_And_Shoot'] - my_score['EFG%_Catch_And_Shoot']))*weights['Catch_And_Shoot']);
         similarity += ((Math.abs(names[i]['FGA_Pull_Up'] - my_score['FGA_Pull_Up']) + Math.abs(names[i]['EFG%_Pull_Up'] - my_score['EFG%_Pull_Up']))*weights['Pull_Up']);
         similarity += ((Math.abs(names[i]['DRIVES_Drives'] - my_score['DRIVES_Drives']) + Math.abs(names[i]['FG%_Drives'] - my_score['FG%_Drives']))*weights['Drives']);
-        similarity += ((Math.abs(names[i]['Height'] - (my_score['Height']+9))*weights['Height']))
+        //Height is different. It take the absolute value of the difference of the players height and your height plus nine extra inches and then multiples that difference by the height weight
+        similarity += ((Math.abs(names[i]['Height'] - (my_score['Height']+9))*weights['Height'])) 
+        // It then divides your similarity by the total weight to get your similarity score compared to that specific player
         similarity_score[names[i]['Player']] = Math.round(similarity/60);
     }
     let five_people = {}
     let edit_similarity_score = similarity_score;
+    //this loop goes through all the similarity scores and then takes the biggest five similarities and then returns them in a dictionary with the five closest people and their similarity scores
     for (let i = 0; i < 5; i++){
         five_people[minimum(edit_similarity_score)] = edit_similarity_score[minimum(edit_similarity_score)];
         delete edit_similarity_score[minimum(edit_similarity_score)];
@@ -78,7 +87,7 @@ function calculation(my_score, names) {
     return five_people
 }
 
-
+// this is a function used to find that score
 function minimum(scores){
     // get object keys array
     var keys = Object.keys(scores),
