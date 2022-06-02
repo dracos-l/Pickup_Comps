@@ -16,11 +16,11 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <NavFooter /> }>
+          <Route path="/Pickup_Comps" element={ <NavFooter /> }>
             <Route index element={(<INDEX_PAGE/>)} />
-            <Route path="about" element={<About />} />
-            <Route path="our_story" element={<OurStory />} />
-            <Route path="contact_us" element={<ContactUs />} />
+            <Route path="/Pickup_Comps/about" element={<About />} />
+            <Route path="/Pickup_Comps/our_story" element={<OurStory />} />
+            <Route path="/Pickup_Comps/contact_us" element={<ContactUs />} />
           </Route>
         </Routes>
       </BrowserRouter>

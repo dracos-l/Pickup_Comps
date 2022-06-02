@@ -16,13 +16,13 @@ function Footer () {
     <Outlet />
     <nav className = 'navbar'> 
       <h1 className="navbar-h1">
-        <a href = '/' className='navbar-a'>Pickup Basketball Comps</a>
+        <a href = '/Pickup_Comps' className='navbar-a'>Pickup Basketball Comps</a>
      </h1>
     </nav>
     <section className="footer">
       <hr className="footer-seperator" />
       <section className="footer-social-media">
-        <a href="./contact_us">Contact Us</a>
+        <a href="/Pickup_Comps/contact_us">Contact Us</a>
       </section>
       <section className="footer-info">
         <section className="footer-info-left">
@@ -32,12 +32,12 @@ function Footer () {
         </section>
         <section className="footer-info-center">
           <section className="footer-info__about">
-            <a href = './about'>About</a>
+            <a href = '/Pickup_Comps/about'>About</a>
           </section>
         </section>
         <section className="footer-info-right">
           <section className="footer-info__story">
-            <a href = './our_story'>Our Story</a>
+            <a href = '/Pickup_Comps/our_story'>Our Story</a>
           </section>
         </section>
       </section>

@@ -16,6 +16,7 @@ const Home = () => {
         the number together and divided by the total weight to get the similarity score. From there, we projected the three most similar 
         NBA players at the bottom of the page.
       </p>
+      <br/>
       </>
     )
   };
